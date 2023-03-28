@@ -1,0 +1,16 @@
+{
+    "logo": {
+        "svg": "../../public/svg/cryptocurrency/dash/logo.svg",
+        "url": "/index.html"
+    },
+    "nav": [
+        {
+            "name": "Dapps",
+            "url": "/dapps.html"
+        },
+        {
+            "name": "FAQ",
+            "url": "/faq.html"
+        }
+    ]
+}

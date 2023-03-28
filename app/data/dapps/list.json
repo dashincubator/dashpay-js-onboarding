@@ -1,0 +1,119 @@
+[
+    {
+        "description": "Decentralized, blockchain-based Twitter alternative built as a Dash Dapp",
+        "thumbnail": "",
+        "title": "Jembe Dapp",
+        "urls": [
+            {
+                "name": "Github",
+                "svg": "../../public/svg/social/github.svg",
+                "url": "https://github.com/dashameter/jembe"
+            },
+            {
+                "name": "Trello",
+                "svg": "../../public/svg/social/trello.svg",
+                "url": "https://trello.com/c/Kzn8JX12"
+            },
+            {
+                "modifier": "black",
+                "name": "Website",
+                "svg": "../../public/svg/link.svg",
+                "url": "http://jembe.dashevo.io"
+            }
+        ]
+    },
+    {
+        "description": "Dash-based version of Flipstarter.Cash, a Bitcoin Cash-based decentralized crowdfunding platform that allows projects to raise funds and allows donors to get a refund of their donations if the funding goal isn’t met by the set time.",
+        "thumbnail": "",
+        "title": "Springboard",
+        "urls": [
+            {
+                "name": "Trello",
+                "svg": "../../public/svg/social/trello.svg",
+                "url": "https://trello.com/c/XdsHbHYN"
+            }
+        ]
+    },
+    {
+        "description": "Account-free Signal and Facebook Messenger alternative with developer tooling to build your own",
+        "thumbnail": "",
+        "title": "Private Messenger Dapp",
+        "urls": [
+            {
+                "name": "Trello",
+                "svg": "../../public/svg/social/trello.svg",
+                "url": "https://trello.com/c/LUyEnwJ9"
+            }
+        ]
+    },
+    {
+        "description": "Store your MineCraft creations with this Dash-integrated Minecraft plugin, view them on any MineCraft explorer website",
+        "thumbnail": "",
+        "title": "DashCraft",
+        "urls": [
+            {
+                "name": "Trello",
+                "svg": "../../public/svg/social/trello.svg",
+                "url": "https://trello.com/c/AWHoFBpg"
+            }
+        ]
+    },
+    {
+        "description": "Your local barista runs this point-of-sale app, you pay with EvoWallet, you leave with coffee",
+        "thumbnail": "",
+        "title": "Point-of-sale Dapp",
+        "urls": [
+            {
+                "name": "Github",
+                "svg": "../../public/svg/social/github.svg",
+                "url": "https://github.com/dashameter/pos-dash"
+            },
+            {
+                "name": "Trello",
+                "svg": "../../public/svg/social/trello.svg",
+                "url": "https://trello.com/c/xAWr4bLJ"
+            },
+            {
+                "modifier": "black",
+                "name": "Website",
+                "svg": "../../public/svg/link.svg",
+                "url": "http://instore.dashevo.io/"
+            }
+        ]
+    },
+    {
+        "description": "eCommerce sample Dapp using EvoWallet and Point-of-Sale Dapp to showcase basic features such as storing items, selecting items for checkout, and going through the checkout process",
+        "thumbnail": "",
+        "title": "eCommerce Sample Dapp",
+        "urls": [
+            {
+                "name": "Github",
+                "svg": "../../public/svg/social/github.svg",
+                "url": "https://github.com/dashameter/dash-checkout"
+            },
+            {
+                "name": "Trello",
+                "svg": "../../public/svg/social/trello.svg",
+                "url": "https://trello.com/c/Pi1PPPxQ"
+            },
+            {
+                "modifier": "black",
+                "name": "Website",
+                "svg": "../../public/svg/link.svg",
+                "url": "http://checkout.dashevo.io"
+            }
+        ]
+    },
+    {
+        "description": "Create and send Dash-denominated invoices",
+        "thumbnail": "",
+        "title": "Invoicing Dapp",
+        "urls": [
+            {
+                "name": "Trello",
+                "svg": "../../public/svg/social/trello.svg",
+                "url": "https://trello.com/c/b00SJTUR"
+            }
+        ]
+    }
+]

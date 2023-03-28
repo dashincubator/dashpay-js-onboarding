@@ -1,0 +1,94 @@
+---json
+{
+    "layout": "layout.njk",
+    "permalink": "index.html",
+    "site": {
+        "title": "DashPay"
+    }
+}
+---
+
+<div class="container --flex-start --max-width-1000px">
+    <section class="--flex-column --spacer-vertical --spacer-700">
+        <div class='page-header --max-width --max-width-600px --padding-right --padding-400'>
+            <span class="page-header-category --color-secondary-400 --margin-300 --text-bold --text-uppercase">
+                {{ index.header.suptitle }}
+            </span>
+
+            <h1 class='page-header-title --line-height-100 --text-bold-600 --text-crop-top --text-1.5x'>
+                {{ index.header.title }}
+            </h1>
+
+            <span class='page-header-subtitle --margin-400 --text-crop-bottom --text-500'>
+                {{ index.header.subtitle }}
+            </span>
+        </div>
+
+        <div class="--max-width --max-width-600px --spacer-top --spacer-400">
+            <div class='group group--offset-top --margin-600'>
+                <div class="group-item">
+                    <a class="button button--curved --background-black --background-state --color-state --color-white --padding-horizontal-600" href="/dapps.html">
+                        <div class="icon --margin-right">
+                            {% include '../../public/svg/explore-circle.svg' %}
+                        </div>
+                        Browse Dapps
+                    </a>
+                </div>
+
+                <div class="group-item">
+                    <a class="button button--curved --background-secondary --background-state --color-state --color-white --padding-horizontal-600" href="/download.html">
+                        Download Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="--absolute-vertical-right --hidden-below-1000px" style='width: 40%;z-index:-1'>
+            <img src="{{ index.header.image }}" alt="" style='width: 100%'>
+        </div>
+    </section>
+</div>
+
+<div class="border --border-grey-500 --border-width-300" style='position: relative;'>
+    <div class="text --absolute-center --background --background-grey-400 --color-text-300 --padding-horizontal --padding-400 --text-uppercase --text-200">
+        <span class="--text-crop-both">
+            Learn More
+        </span>
+    </div>
+</div>
+
+<div class="container --border-grey-500 --border-left --border-right --border-width-300 --flex-horizontal --max-width-1000px --padding-horizontal --padding-700">
+    {% for feature in index.features %}
+        <section class="--flex-center --max-width --max-width-800px --spacer-top --spacer-600">
+            <div class='page-header --text-center'>
+                <span class="page-header-category --color-secondary-400 --text-bold --text-crop-top --text-uppercase">
+                    Features
+                </span>
+
+                <h2 class='page-header-title --text-bold-600'>
+                    {{ feature.title }}
+                </h2>
+
+                <span class='page-header-subtitle --margin-400'>
+                    {{ feature.text }}
+                </span>
+            </div>
+
+            <img class='--spacer-top --spacer-400' src="{{ feature.image }}" alt="" style='width: 300px;'>
+        </section>
+    {% endfor %}
+
+    <section class="--spacer-top --spacer-600"></section>
+</div>
+
+<div class="border --border-grey-500 --border-width-300"></div>
+
+<div class="container --max-width-1000px">
+    <section class="--flex-center --spacer-top --spacer-600">
+        <div class="card --background-grey-300 --padding --padding-border-width --width --width-full">
+            <div class='card --background-black-400' style='overflow:hidden;padding-bottom: 56%;'>
+                <iframe class='--absolute-full' width="100%" height="100%" src="{{ index.video.src }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+</div>

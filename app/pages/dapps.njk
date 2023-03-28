@@ -1,0 +1,75 @@
+---json
+{
+    "layout": "layout.njk",
+    "permalink": "dapps.html",
+    "site": {
+        "title": "Dash Dapps"
+    }
+}
+---
+
+<div class="container --max-width-1200px">
+    <section class="--flex-center --spacer-top --spacer-600">
+        <div class="page-header --max-width --max-width-800px --text-center">
+            <span class="page-header-category --color-secondary-400 --text-bold --text-crop-top --text-uppercase">
+                {{ dapps.header.suptitle }}
+            </span>
+
+            <h1 class="page-header-title">
+                {{ dapps.header.title }}
+            </h1>
+
+            <span class='page-header-subtitle --margin-400 --text-crop-bottom'>
+                {{ dapps.header.subtitle }}
+            </span>
+        </div>
+    </section>
+
+    <section class="--spacer-top --spacer-600">
+        <div class="group group--grid group--offset-top --flex-horizontal --margin-800" data-grid='3'>
+
+            {% for dapp in dapps.list %}
+                <div class="group-item">
+                    <div class="card --background-white-400 --border-radius-500 --flex-column --padding --padding-600 --width --width-full">
+                        <div class="image --background-black-400 --size-900" style='background-image: url({{ dapp.thumbnail }})'></div>
+
+                        <div class="text --margin-top --margin-300 --text-bold --text-500 --width --width-full">
+                            <span class='--text-crop-bottom'>
+                                {{ dapp.title }}
+                            </span>
+                        </div>
+
+                        <p class='--color --color-text-300 --margin-300'>
+                            {{ dapp.description.slice(0, 80) }}{{ '...' if dapp.description | length > 80 }}
+                        </p>
+
+                        {% if dapp.urls | length %}
+                            <div class="--margin-top --margin-auto">
+                                <div class="--margin-top --margin-400">
+                                    <div class="group group--offset-top --flex-end --margin-200">
+
+                                        {% for url in dapp.urls %}
+                                            <div class="group-item">
+                                                <a class="button tooltip --background-state --background-{{ url.modifier if url.modifier | length else url.name | lower }} --border-radius-500 --color-state --color-white --padding-200" data-cache='{"directives": {"hover": "tooltip"}}' href='{{ url.url }}' target='_blank'>
+                                                    <div class="icon">
+                                                        {% include url.svg %}
+                                                    </div>
+
+                                                    <span class='tooltip-content tooltip-content--message tooltip-content--n'>
+                                                        {{ url.name }}
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>

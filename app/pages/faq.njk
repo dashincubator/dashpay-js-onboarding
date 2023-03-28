@@ -1,0 +1,131 @@
+---json
+{
+    "layout": "layout.njk",
+    "permalink": "faq.html",
+    "site": {
+        "title": "DashPay Frequently Asked Questions"
+    }
+}
+---
+
+<div class="container --max-width-600px">
+    <div class="frames">
+        <div class="frame --active" data-cache='{"refs": ["faq.sections"]}'>
+            <section class="--spacer-top --spacer-600">
+                <div class="page-header">
+                    <div class="page-header-category --margin-300">
+                        <div class="group group--offset-top --margin-500">
+                            <div class="group-item">
+                                <div class='text --color-text-300 --text-300'>
+                                    <span class="--text-crop-both">
+                                        FAQ
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1 class="page-header-title">
+                        Frequently Asked Questions
+                    </h1>
+                </div>
+            </section>
+
+            <section class="--spacer-top --spacer-100">
+                <div class="text --flex-row">
+                    <div class="icon --margin-right">
+                        {% include '../../public/svg/clock.svg' %}
+                    </div>
+
+                    <span class='--text-crop-both'>
+                        Last Modified <b>{{ page.date.toUTCString() }}</b>
+                    </span>
+                </div>
+            </section>
+
+            <section class="--spacer-top --spacer-600">
+                <div class="button --background-black-400 --color-grey-300 --flex-start --padding-horizontal-500 --padding-vertical-400 --pointer-events-none --text-300 --width-full">
+                    Select A Category
+                </div>
+
+                {% for filename, data in faq %}
+                    <div
+                        class="button --background-grey-300 --background-state --background-white --color-secondary --color-state --color-text-400 --flex-row --margin-top --margin-border-width --padding-500 --width-full"
+                        data-cache='{"directives": {"click": ["frame", "scrollto"]}, "properties": {"frame": {"ignore": true}, "refs": {"frame": "{{ data.title | slug }}", "scrollto": "site.scrolltop"}}}'
+                    >
+                        <div class="text-list --flex-fill">
+                            <b class="text">
+                                <span class="--text-truncate">
+                                    {{ data.title }}
+                                </span>
+                            </b>
+                            <span class="text --color-text-300 --text-100">
+                                {{ data.questions | length }} Answers
+                            </span>
+                        </div>
+
+                        <div class="icon --margin-left --margin-400">
+                            {% include '../../public/svg/arrow-head.svg' %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </section>
+        </div>
+
+        {% for filename, data in faq %}
+            <div class="frame" data-cache='{"refs": ["{{ data.title | slug }}"]}'>
+                <section class="--spacer-top --spacer-600">
+                    <div class="page-header">
+                        <div class="page-header-category --margin-300">
+                            <div class="group group--offset-top --margin-500">
+                                <div class="group-item">
+                                    <div class='text --color-black --color-state --color-text-300 --text-underline-dotted --text-300 ' data-cache='{"directives": {"click": ["frame"]}, "properties": {"frame": {"ignore": true}, "refs": {"frame": "faq.sections"}}}' data-click>
+                                        <span class="--text-crop-both">
+                                            FAQ
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="group-caret --size-300">
+                                    <div class="icon --absolute-center --color-border-500 --size-300">
+                                        {% include '../../public/svg/arrow-head.svg' %}
+                                    </div>
+                                </div>
+
+                                <div class="group-item">
+                                    <div class='text --color-secondary-400 --text-300'>
+                                        <span class="--text-crop-both">
+                                            {{ data.title }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h1 class="page-header-title">
+                            {{ data.title }}
+                        </h1>
+
+                        <div class="page-header-subtitle --text-crop-bottom">
+                            Answers to commonly asked questions
+                        </div>
+                    </div>
+                </section>
+
+                <section class="--spacer-top --spacer-600">
+                    {% for question in data.questions %}
+                        <div class="page-header --spacer-top --spacer-400">
+                            <h4 class='page-header-title --text-crop-both'>
+                                {{ question.title }}
+                            </h4>
+                        </div>
+
+                        {% for answer in question.answers %}
+                            <p class='--margin-400'>{{ answer }}</p>
+                        {% endfor %}
+                    {% endfor %}
+                </section>
+            </div>
+        {% endfor %}
+    </div>
+</div>

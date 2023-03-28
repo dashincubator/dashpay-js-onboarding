@@ -1,0 +1,17 @@
+[
+    {
+        "image": "https://media.dash.org/wp-content/uploads/payments.png",
+        "title": "Digital Cash For Your Everyday Needs",
+        "text": "Grab a coffee, buy a plane ticket, or pay your phone bill. Dash is growing and is accepted by new businesses every day."
+    },
+    {
+        "image": "https://media.dash.org/wp-content/uploads/how-it-works-2.svg",
+        "title": "Explore Dash Dapps",
+        "text": "There are hundreds of decentralized applications built on Dash Platform with many more on the way. Access each Dapp simply and securely with the help of DashPay."
+    },
+    {
+        "image": "https://media.dash.org/wp-content/uploads/graphs1.svg",
+        "title": "Own your data",
+        "text": "Unlike centralized platforms, all of your data is secured on your device. You decide what to share and what to keep private."
+    }
+]

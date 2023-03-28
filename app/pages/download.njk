@@ -1,0 +1,91 @@
+---json
+{
+    "layout": "layout.njk",
+    "permalink": "download.html",
+    "site": {
+        "title": "DashPay Download"
+    }
+}
+---
+
+<div class="container --max-width-1200px">
+    <section class='--flex-horizontal --spacer-top --spacer-600'>
+        <div class="card --background-grey-300 --padding --padding-border-width --width-auto">
+            <div class='group group--offset-top --margin-border-width'>
+                {% for frame in download.frames %}
+                    <div
+                        class="button group-item {{ '--active' if 'Browser' in frame.device }} --background-grey-300 --background-secondary --background-state --border-radius-300 --color-state --color-text-400 --color-white"
+                        data-cache='{"directives": {"click": ["frame"]}, "properties": {"refs": {"frame": "{{ frame.device }}"}}}'
+                    >
+                        {{ frame.device }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="frames">
+    {% for frame in download.frames %}
+        <div class="frame {{ '--active' if 'Browser' in frame.device }}" data-cache='{"refs": ["{{ frame.device }}"]}'>
+            <div class="container --max-width-1200px">
+                <section class='--flex-horizontal --spacer-top --spacer-400'>
+                    <div class='page-header --text-center'>
+                        <h1 class='page-header-title --line-height-100 --text-bold-600 --text-crop-both'>
+                            Install DashPay For Your {{ frame.device }}
+                        </h1>
+                    </div>
+
+                    <div class='--spacer-top --spacer-400' style='width: 800px;z-index:-1'>
+                        <div class="button button--static --absolute-center --background-black-400 --color-white-400 --text-bold" style='z-index:1;'>
+                            Temporary Placeholder Image
+                        </div>
+                        <img src="{{ frame.image }}" alt="" style='opacity: 0.24;width: 100%;'>
+                    </div>
+                </section>
+            </div>
+
+            <div class="border --border-grey-500 --border-width-300" style='position: relative;z-index: 1;'>
+                <div class="container --max-width-1200px">
+                    <div class="--absolute-center --width --width-full">
+                        <div class="card --background-grey-400 --border --border-border-300 --border-dashed --border-radius-500 --border-width-300 --flex-center --padding --padding-700 --width-full">
+                            <div class="button button--curved --background-secondary --background-state --color-state --color-white --padding-horizontal-600">
+                                Install DashPay For {{ frame.device }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="container">
+    <section class="--spacer-top --spacer-700">
+        <div class='page-header --text-center'>
+            <span class="page-header-category --color-secondary-400 --text-bold --text-crop-top --text-uppercase">
+                Platforms
+            </span>
+
+            <h2 class='page-header-title --text-bold-600 --text-crop-bottom'>
+                Supported Browsers
+            </h2>
+        </div>
+    </section>
+
+    <section class='--spacer-top --spacer-500'>
+        <div class="group group--offset-top --flex-center --margin-900">
+            {% for browser in download.browsers %}
+                <a class="group-item --flex-column" href='{{ browser.url }}'>
+                    <div class="--flex-center">
+                        <img src="{{ browser.image }}" alt="" style='height: 64px;width: auto'>
+                    </div>
+
+                    <div class="text --flex-center --margin-top --margin-300 --text-500">
+                        {{ browser.name }}
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+</div>

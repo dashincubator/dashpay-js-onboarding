@@ -1,0 +1,29 @@
+<div class="container --max-width-1000px" data-cache='{"ref": "site.scrolltop"}'>
+    <section class="--spacer-top">
+        <div class="group group--offset-top --flex-center:600px --flex-horizontal-space-between --margin-700">
+            <div class="group-item">
+                <a href="{{ header.logo.url }}">
+                    <div class='icon --color-secondary-400 --size-800 --width --width-auto'>
+                        {% include header.logo.svg %}
+                    </div>
+                </a>
+            </div>
+
+            <div class='--flex-start'>
+                {% for link in header.nav %}
+                    <div class="group-item">
+                        <a href="{{ link.url }}" class="link --color-secondary --color-text-500 --color-state">
+                            {{ link.name }}
+                        </a>
+                    </div>
+                {% endfor %}
+
+                <div class="group-item">
+                    <a class="button button--curved --background-secondary --background-state --color-state --color-white --padding-horizontal-600" href='/download.html'>
+                        Download Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

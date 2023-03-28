@@ -1,0 +1,22 @@
+[
+    {
+        "name": "dash",
+        "svg": "../../public/svg/cryptocurrency/dash/logomark.svg",
+        "url": "https://www.dash.org/"
+    },
+    {
+        "name": "discord",
+        "svg": "../../public/svg/social/discord.svg",
+        "url": "https://discordapp.com/invite/PXbUxJB"
+    },
+    {
+        "name": "github",
+        "svg": "../../public/svg/social/github.svg",
+        "url": "https://github.com/dashpay"
+    },
+    {
+        "name": "twitter",
+        "svg": "../../public/svg/social/twitter.svg",
+        "url": "https://twitter.com/Dashpay"
+    }
+]

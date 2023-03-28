@@ -1,0 +1,52 @@
+<section class="--spacer-top --spacer-600">
+    <div class='icon --color-black-400 --min-width --min-width-full' style='height: auto;margin-bottom: -1px'>
+        {% include '../../public/svg/mask/arrow.svg' %}
+    </div>
+</section>
+
+<section class="--background --background-black-400 --flex-column">
+    <div class="container">
+        <section class="--flex-center --spacer-vertical --spacer-600">
+            <div class='icon --color-secondary-400 --size-800 --width --width-auto'>
+                {% include '../../public/svg/cryptocurrency/dash/logo.svg' %}
+            </div>
+
+            <div class='page-header --spacer-top --spacer-200 --text-center'>
+                <h3 class='page-header-title --color-white-400 --line-height-300 --text-bold --text-crop-both'>
+                    Instant transactions and micro-fees. <br>
+                    Any amount, anytime, anywhere.
+                </h3>
+            </div>
+
+            <a class="button button--curved --background-secondary --background-state --color-state --color-white --padding-horizontal-600 --spacer-top --spacer-300" href='/download.html'>
+                Download DashPay Today
+            </a>
+        </section>
+    </div>
+
+    <div class="container --border-black-300 --border-top --border-width-300 --max-width-1000px" data-cache='{"ref": "site.scrolltop"}'>
+        <section class="--padding-vertical --padding-600">
+            <div class="group group--offset-top --flex-horizontal-space-between --margin-600">
+                <div class="--flex-start">
+                    <div class="group-item">
+                        <span class="text --color-grey-500 --text-300">
+                            &copy; 2021 DashPay All Rights Reserved
+                        </span>
+                    </div>
+                </div>
+
+                <div class='--flex-start --margin-500'>
+                    {% for social in socials %}
+                        <div class="group-item --flex-vertical">
+                            <a class='link --color-grey-500 --color-state --color-white --inline' href='{{ social.url }}' target='_blank'>
+                                <div class="icon --size-500">
+                                    {% include social.svg %}
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

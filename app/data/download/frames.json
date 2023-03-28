@@ -1,0 +1,23 @@
+[
+    {
+        "device": "Browser",
+        "image": "/images/mockup/extension.png",
+        "store": {
+            "url": "#"
+        }
+    },
+    {
+        "device": "iOS",
+        "image": "/images/mockup/iphone.png",
+        "store": {
+            "url": "#"
+        }
+    },
+    {
+        "device": "Android",
+        "image": "/images/mockup/android.png",
+        "store": {
+            "url": "#"
+        }
+    }
+]

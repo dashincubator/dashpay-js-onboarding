@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <meta name='viewport' content='width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimal-ui'>
+
+        <title>{{ site.title }}</title>
+        <meta name='description' content='{{ site.description }}'>
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <link href='/css/themes/default.css' rel='stylesheet' type='text/css'>
+        <link href='/css/app.css' rel='stylesheet' type='text/css'>
+
+        <noscript>
+            Javascript Is Required To View This Website! <br />
+
+            <a href='https://www.enable-javascript.com/' target='_blank'>
+                Follow These Instructions To Enable Javascript In Your Web Browser.
+            </a>
+        </noscript>
+    </head>
+    <body>
+        <section
+            class='site'
+            data-cache='{"directives":{"scroll":["controls","scrollbar"]},"properties":{"refs":{"controls":"site.controls","scrollbar":"scrollbar.site"}},"refs":["scrollbar.mount[]","scrollbar.width.mount","scrollto.mount","site.container"]}'
+            data-scrollbar
+        >
+            <section class='page --flex-column'>
+                {% include './header.njk' %}
+
+                {{ content | safe }}
+
+                {% include './footer.njk' %}
+            </section>
+
+            <div class='scrollbar scrollbar--fixed scrollbar--hidden' data-cache='{"refs":["scrollbar.site"]}'></div>
+        </section>
+
+        <script src='/js/app.js'></script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+        "image": "/images/browsers/chrome.png",
+        "name": "Chrome",
+        "url": "#"
+    },
+    {
+        "image": "/images/browsers/firefox.png",
+        "name": "Firefox",
+        "url": "#"
+    },
+    {
+        "image": "/images/browsers/brave.png",
+        "name": "Brave",
+        "url": "#"
+    },
+    {
+        "image": "/images/browsers/edge.png",
+        "name": "Edge",
+        "url": "#"
+    }
+]
